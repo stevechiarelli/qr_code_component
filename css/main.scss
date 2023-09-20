@@ -4,63 +4,46 @@ $lightgrey: hsl(212, 45%, 89%);
 $grayishblue: hsl(220, 15%, 55%);
 $darkblue: hsl(218, 44%, 22%);
 
-body {
+* {
     font-family: 'Outfit', sans-serif;
-    background: $lightgrey;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-p {
-    text-align: center;
-    padding: 0 0.8em;
+body {
+    min-height: 100vh;
+    background: $lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
+    width: 375px;
     background: $white;
     padding: 1.1em;
     border-radius: 1.5em;
+    box-shadow: 16px 19px 17px rgba(0,0,0,0.1);
 
     .heading {
         font-weight: 700;
         font-size: 1.5rem;
+        color: $darkblue;
+        text-align: center;
+        margin: 1em 0.5em;
     }
 
     .copy {
         font-size: 1.2rem;
+        font-weight: 400;
         color: $grayishblue;
-        margin: 1.2em 0; 
+        text-align: center;
+        margin: 1em 0.7em;
     }
 
     img {
         width: 100%;
         border-radius: 1em;
-    }
-}
-
-@media only screen and (min-width: 680px) {
-    .card {
-        width: 50%;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    .card {
-        width: 35%;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .card {
-        width: 25%;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .card {
-        width: 20%;
     }
 }
